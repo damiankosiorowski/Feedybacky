@@ -3,7 +3,7 @@ class Feedybacky {
 
     constructor(id, params) {
     	this.params = params;
-        this.basePath = null;
+        this.basePath = (this.params.basePath ? this.params.basePath : null);
         this.consoleErrors = [];
         this.importDependencies();
         this.container = document.getElementById(id);
