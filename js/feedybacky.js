@@ -4,6 +4,9 @@ class Feedybacky {
     constructor(id, params) {
     	this.params = params;
         this.basePath = (this.params.basePath ? this.params.basePath : null);
+	if(this.params.showAlertContainer) {
+	    this.showAlertContainer = this.params.showAlertContainer;
+	}
         this.consoleErrors = [];
         this.importDependencies();
         this.container = document.getElementById(id);
